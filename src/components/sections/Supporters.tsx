@@ -11,14 +11,13 @@ export function Supporters() {
         <SectionHeading
           align="center"
           className="mx-auto"
-          eyebrow="Apoiadores"
           title={
             <>
               Parceiros que compartilham o mesmo{" "}
               <em className="italic text-silver font-display">endereço</em> de excelência.
             </>
           }
-          description="No mesmo prédio do Carmo, a JHCM Coworking conta com a estrutura e a credibilidade de referências em advocacia e assessoria contábil."
+          description="No Ed. Rogelio Fernandez Business Center, a RF Coworking conta com a estrutura e a credibilidade de referências em advocacia e assessoria contábil."
         />
 
         <div className="mx-auto mt-16 grid max-w-4xl gap-6 sm:grid-cols-2 sm:gap-8">

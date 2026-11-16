@@ -2,8 +2,8 @@ export type FAQItem = { q: string; a: string };
 
 export const homeFaqs: FAQItem[] = [
   {
-    q: "O que é a JHCM Coworking?",
-    a: "A JHCM é um coworking executivo premium no 12º andar do Carmo, em Belo Horizonte. Oferecemos salas privativas, open office, salas de reunião e endereço fiscal para empresas e profissionais exigentes.",
+    q: "O que é a RF Coworking?",
+    a: "A RF é um coworking executivo premium no Ed. Rogelio Fernandez Business Center, em Belém. Oferecemos salas privativas, open office, salas de reunião e endereço fiscal para empresas e profissionais exigentes.",
   },
   {
     q: "Quais serviços estão disponíveis?",
@@ -11,61 +11,38 @@ export const homeFaqs: FAQItem[] = [
   },
   {
     q: "Posso visitar o espaço antes de contratar?",
-    a: "Sim. Agende uma visita pelo WhatsApp ou formulário de contato. Nossa equipe apresenta o andar, os ambientes e as opções de plano.",
+    a: "Sim. Agende uma visita pelo WhatsApp ou pelo formulário na página inicial. Nossa equipe apresenta o andar, os ambientes e as opções de plano.",
   },
   {
     q: "O acesso é 24 horas?",
     a: "Clientes contratados têm acesso individual 24 horas por dia, 7 dias por semana, com controle biométrico no andar.",
   },
   {
-    q: "Onde a JHCM fica?",
-    a: "R. Buenos Aires, 10 — 12º andar, Carmo, Belo Horizonte/MG. Um dos endereços corporativos mais nobres da cidade.",
+    q: "Onde a RF fica?",
+    a: "Travessa Quintino Bocaiuva, 2301 — Ed. Rogelio Fernandez Business Center, Andar 01, Sala 107, Cremação, Belém/PA. Um dos endereços corporativos mais nobres da cidade.",
   },
 ];
 
 export const sobreFaqs: FAQItem[] = [
   {
-    q: "Há quanto tempo a JHCM existe?",
-    a: "A JHCM foi fundada em 2022 com a proposta de oferecer um coworking executivo verdadeiramente premium em Belo Horizonte.",
+    q: "Há quanto tempo a RF existe?",
+    a: "A RF foi fundada em 2022 com a proposta de oferecer um coworking executivo verdadeiramente premium em Belém.",
   },
   {
     q: "Quem costuma utilizar o espaço?",
-    a: "Advogados, contadores, consultores, startups, empresas estabelecidas e profissionais autônomos que precisam de discrição, estrutura e credibilidade.",
+    a: "Advogados, médicos, contadores, consultores, startups, empresas estabelecidas e profissionais autônomos que precisam de discrição, estrutura e credibilidade.",
   },
   {
-    q: "Qual o diferencial da JHCM?",
-    a: "Andar inteiro dedicado, mobiliário executivo, internet corporativa, acesso 24h, recepção premium e um endereço corporativo de alto padrão no Carmo.",
+    q: "Qual o diferencial da RF?",
+    a: "Espaço dedicado no Ed. Rogelio Fernandez Business Center, mobiliário executivo, internet corporativa, acesso 24h, recepção premium e um endereço corporativo de alto padrão na Cremação.",
   },
   {
     q: "Posso agendar uma visita guiada?",
     a: "Sim. Entre em contato pelo WhatsApp ou pela página de contato. Visitas são agendadas em horário comercial com acompanhamento da equipe.",
   },
   {
-    q: "A JHCM aceita empresas de qualquer porte?",
+    q: "A RF aceita empresas de qualquer porte?",
     a: "Sim. Atendemos desde profissionais autônomos até empresas com equipes enxutas que buscam presença corporativa sem o custo de um escritório tradicional.",
-  },
-];
-
-export const contatoFaqs: FAQItem[] = [
-  {
-    q: "Qual a forma mais rápida de falar com a equipe?",
-    a: "O WhatsApp é o canal mais ágil. Você também pode ligar, enviar e-mail ou preencher o formulário de contato nesta página.",
-  },
-  {
-    q: "Em quanto tempo recebo retorno?",
-    a: "Mensagens pelo WhatsApp costumam ser respondidas no mesmo dia útil. E-mails e formulários são retornados em até 24 horas úteis.",
-  },
-  {
-    q: "Posso agendar uma visita pelo site?",
-    a: "Sim. Use o formulário de contato ou o WhatsApp para solicitar uma visita. Confirmamos data e horário conforme disponibilidade.",
-  },
-  {
-    q: "A recepção funciona em qual horário?",
-    a: "Segunda a sexta, das 08h às 19h. Clientes contratados mantêm acesso ao andar 24 horas, inclusive fora do horário da recepção.",
-  },
-  {
-    q: "Como chegar à JHCM?",
-    a: "Estamos na R. Buenos Aires, 10 — 12º andar, Carmo, Belo Horizonte. Use o mapa nesta página ou abra a localização no Google Maps.",
   },
 ];
 
@@ -118,7 +95,7 @@ export const salaPrivativaFaqs: FAQItem[] = [
 export const enderecoFiscalFaqs: FAQItem[] = [
   {
     q: "O endereço pode ser usado para abrir uma empresa?",
-    a: "Sim. Nosso endereço é regularmente aceito pela Junta Comercial de Minas Gerais e pela Receita Federal para abertura, alteração e manutenção de CNPJ de empresas dos mais diversos ramos de atividade.",
+    a: "Sim. Nosso endereço é regularmente aceito pela Junta Comercial do Pará e pela Receita Federal para abertura, alteração e manutenção de CNPJ de empresas dos mais diversos ramos de atividade.",
   },
   {
     q: "Posso receber correspondências e notificações?",
@@ -129,7 +106,7 @@ export const enderecoFiscalFaqs: FAQItem[] = [
     a: "Atividades comerciais, prestação de serviços e atividades intelectuais em geral. Atividades que exigem alvará industrial ou estoque físico não são compatíveis com o serviço de endereço fiscal.",
   },
   {
-    q: "Preciso ir até a JHCM para usar o serviço?",
+    q: "Preciso ir até a RF para usar o serviço?",
     a: "Não. Toda a comunicação é digital. Você só precisa ir pessoalmente se quiser retirar correspondências ou utilizar a estrutura física do coworking.",
   },
   {

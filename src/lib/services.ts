@@ -45,9 +45,9 @@ export const services: Service[] = [
     slug: "endereco-fiscal",
     href: "/servicos/endereco-fiscal",
     title: "Endereço Fiscal e Comercial",
-    short: "Endereço empresarial premium em BH para abrir e operar sua empresa.",
+    short: "Endereço empresarial premium em Belém para abrir e operar sua empresa.",
     description:
-      "Utilize o endereço da JHCM como sede fiscal e comercial da sua empresa. Receba correspondências, registre sua CNPJ em local prestigiado e ganhe credibilidade imediata.",
+      "Utilize o endereço da RF como sede fiscal e comercial da sua empresa. Receba correspondências, registre sua CNPJ em local prestigiado e ganhe credibilidade imediata.",
     icon: faBuilding,
     image:
       "https://images.unsplash.com/photo-1486325212027-8081e485255e?auto=format&fit=crop&w=1600&q=80",
@@ -146,7 +146,7 @@ export const differentials: {
   },
   {
     title: "Ambiente profissional",
-    desc: "Andar inteiro dedicado à JHCM, com identidade visual sóbria e silenciosa.",
+    desc: "Espaço dedicado à RF, com identidade visual sóbria e silenciosa.",
     icon: faBriefcase,
   },
   {
@@ -157,7 +157,7 @@ export const differentials: {
 ];
 
 export const stats = [
-  { value: 12, suffix: "º", label: "Andar com vista privilegiada" },
+  { value: 1, suffix: "º", label: "Andar no Ed. Rogelio Fernandez" },
   { value: 24, suffix: "h", label: "Acesso disponível ao cliente" },
   { value: 100, suffix: "+", label: "Empresas atendidas" },
   { value: 1, suffix: "Gbps", label: "Link de internet dedicada" },
@@ -165,6 +165,7 @@ export const stats = [
 
 export const audiences = [
   "Advogados",
+  "Médicos",
   "Contadores",
   "Consultores",
   "Startups",
@@ -175,8 +176,8 @@ export const audiences = [
 export const timeline = [
   {
     year: "2022",
-    title: "Nasce a JHCM",
-    text: "Fundada com a proposta de oferecer um coworking executivo verdadeiramente premium em Belo Horizonte.",
+    title: "Nasce a RF",
+    text: "Fundada com a proposta de oferecer um coworking executivo verdadeiramente premium em Belém.",
   },
   {
     year: "2025",

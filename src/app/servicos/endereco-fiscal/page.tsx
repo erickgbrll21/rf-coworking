@@ -21,11 +21,11 @@ import { FaIcon } from "@/components/ui/FaIcon";
 export const metadata: Metadata = {
   title: "Endereço Fiscal e Comercial",
   description:
-    "Endereço fiscal e comercial em Belo Horizonte para abrir, regularizar e operar sua empresa com credibilidade. JHCM Coworking, Carmo.",
+    "Endereço fiscal e comercial em Belém para abrir, regularizar e operar sua empresa com credibilidade. RF Coworking, Cremação.",
 };
 
 const benefits: { icon: IconDefinition; title: string; desc: string }[] = [
-  { icon: faLocationDot, title: "Endereço em região nobre", desc: "Sua empresa registrada em um dos endereços corporativos mais valorizados de Belo Horizonte." },
+  { icon: faLocationDot, title: "Endereço em região nobre", desc: "Sua empresa registrada em um dos endereços corporativos mais valorizados de Belém." },
   { icon: faBuilding, title: "CNPJ regularizado", desc: "Endereço aceito pela Junta Comercial e Receita Federal para registro e operação da sua CNPJ." },
   { icon: faEnvelope, title: "Triagem de correspondências", desc: "Recebemos suas correspondências, notificações e encomendas com triagem e aviso digital." },
   { icon: faAward, title: "Credibilidade imediata", desc: "Um endereço sério muda a percepção de clientes, fornecedores e investidores sobre sua empresa." },
@@ -55,15 +55,14 @@ export default function EnderecoFiscalPage() {
   return (
     <>
       <PageHero
-        eyebrow="Endereço Fiscal e Comercial"
         title={
           <>
             Um endereço empresarial à altura da sua <em className="italic text-silver font-display">marca</em>.
           </>
         }
-        description="Registre sua empresa em um dos endereços corporativos mais nobres de Belo Horizonte e ganhe credibilidade imediata diante de clientes, fornecedores e parceiros."
+        description="Registre sua empresa em um dos endereços corporativos mais nobres de Belém e ganhe credibilidade imediata diante de clientes, fornecedores e parceiros."
         image={enderecoFiscalHeroPhoto}
-        imageAlt="Edifício corporativo em Belo Horizonte — endereço fiscal JHCM Coworking"
+        imageAlt="Edifício corporativo em Belém — endereço fiscal RF Coworking"
         crumbs={[{ label: "Início", href: "/" }, { label: "Serviços" }, { label: "Endereço Fiscal" }]}
       />
 
@@ -72,7 +71,6 @@ export default function EnderecoFiscalPage() {
         <div className="container grid lg:grid-cols-12 gap-16 items-start">
           <div className="lg:col-span-5">
             <SectionHeading
-              eyebrow="O que é"
               title={
                 <>
                   Endereço fiscal,
@@ -100,7 +98,7 @@ export default function EnderecoFiscalPage() {
             </Reveal>
             <Reveal delay={0.16}>
               <p className="text-base leading-relaxed text-bone-300/70">
-                Na JHCM, oferecemos os dois serviços em um único plano, com a
+                Na RF, oferecemos os dois serviços em um único plano, com a
                 conveniência de ter sua correspondência recebida, triada e
                 disponibilizada digitalmente — sem que você precise estar
                 fisicamente presente.
@@ -111,10 +109,9 @@ export default function EnderecoFiscalPage() {
       </section>
 
       {/* BENEFÍCIOS */}
-      <section className="bg-ink-900 py-28 md:py-36 noise">
+      <section className="bg-ink-900 py-28 md:py-36">
         <div className="container">
           <SectionHeading
-            eyebrow="Benefícios"
             title="Por que escolher um endereço fiscal premium."
           />
           <div className="mt-16 grid md:grid-cols-2 lg:grid-cols-3 gap-px bg-white/8 rounded-2xl overflow-hidden">
@@ -139,7 +136,6 @@ export default function EnderecoFiscalPage() {
       <section className="bg-ink-950 py-28 md:py-36">
         <div className="container">
           <SectionHeading
-            eyebrow="Como funciona"
             title={
               <>
                 Processo <em className="italic text-silver font-display">simples</em>, ágil e transparente.
@@ -164,7 +160,6 @@ export default function EnderecoFiscalPage() {
       <section className="bg-ink-900 py-28 md:py-36">
         <div className="container">
           <SectionHeading
-            eyebrow="O que está incluso"
             title="Tudo o que sua empresa precisa."
           />
           <div className="mt-14">
@@ -181,7 +176,7 @@ export default function EnderecoFiscalPage() {
             Posicione sua empresa em um <em className="italic text-silver font-display">endereço de prestígio</em>.
           </>
         }
-        description="Fale com a equipe JHCM e descubra como ativar seu endereço fiscal em poucos dias úteis."
+        description="Fale com a equipe RF e descubra como ativar seu endereço fiscal em poucos dias úteis."
       />
     </>
   );

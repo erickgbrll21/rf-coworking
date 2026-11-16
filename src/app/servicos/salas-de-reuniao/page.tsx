@@ -20,7 +20,7 @@ import { FaIcon } from "@/components/ui/FaIcon";
 export const metadata: Metadata = {
   title: "Salas de Reunião · 6 e 8 pessoas",
   description:
-    "Salas de reunião executivas para 6 e 8 pessoas em Belo Horizonte. Reserva por hora, videoconferência, TV 4K e atendimento premium.",
+    "Salas de reunião executivas para 6 e 8 pessoas em Belém. Reserva por hora, videoconferência, TV 4K e atendimento premium.",
 };
 
 const featuresLine: { icon: IconDefinition; label: string }[] = [
@@ -34,7 +34,6 @@ export default function SalasReuniaoPage() {
   return (
     <>
       <PageHero
-        eyebrow="Salas de Reunião"
         title={
           <>
             Reuniões à altura das suas <em className="italic text-silver font-display">decisões</em>.
@@ -63,7 +62,6 @@ export default function SalasReuniaoPage() {
       <section className="bg-ink-950 py-28 md:py-36">
         <div className="container">
           <SectionHeading
-            eyebrow="Nossas salas"
             title={
               <>
                 Escolha o <em className="italic text-silver font-display">formato</em> ideal.
@@ -94,13 +92,12 @@ export default function SalasReuniaoPage() {
                 </Reveal>
                 <div className="lg:col-span-5">
                   <Reveal>
-                    <span className="eyebrow">
-                      <span className="h-px w-8 bg-silver" />
-                      {room.capacity}
-                    </span>
-                    <h3 className="heading-display text-4xl md:text-5xl mt-5">
+                    <h3 className="heading-display text-4xl text-balance md:text-5xl">
                       {room.name}
                     </h3>
+                    <p className="mt-4 inline-flex rounded-full border border-silver/30 bg-silver/10 px-4 py-1.5 text-xs font-medium tracking-wide text-silver-soft">
+                      {room.capacity}
+                    </p>
                   </Reveal>
                   <Reveal delay={0.1}>
                     <ul className="mt-8 space-y-3">

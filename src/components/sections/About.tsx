@@ -8,28 +8,27 @@ import aboutPhoto from "../../../assets/coworking/Foto_110.jpg";
 
 export function About() {
   return (
-    <section className="relative bg-ink-900 py-20 sm:py-28 md:py-40 noise">
+    <section className="relative bg-ink-900 py-20 sm:py-28 md:py-40">
       <div className="container grid min-w-0 max-w-full gap-12 items-center sm:gap-16 lg:grid-cols-12 lg:gap-20">
         <div className="min-w-0 lg:col-span-6">
           <SectionHeading
-            eyebrow="Sobre a JHCM"
             title={
               <>
                 Um <em className="italic text-silver font-display">endereço</em> à altura do
                 seu negócio.
               </>
             }
-            description="A JHCM Coworking ocupa o 12º andar de um dos prédios mais prestigiados do Carmo, em Belo Horizonte. Aqui, advogados, contadores, consultores e empresas encontram a estrutura executiva, a discrição e a credibilidade que o mercado exige."
+            description="A RF Coworking ocupa o Ed. Rogelio Fernandez Business Center, na Cremação, em Belém. Aqui, advogados, médicos, contadores, consultores e empresas encontram a estrutura executiva, a discrição e a credibilidade que o mercado exige."
           />
 
           <Reveal delay={0.15}>
             <div className="mt-10 grid max-w-md grid-cols-2 gap-4 sm:gap-8">
               {stats.map((s) => (
                 <div key={s.label} className="min-w-0 border-l border-silver/30 pl-3 sm:pl-5">
-                  <div className="font-display text-4xl md:text-5xl text-bone-50">
+                  <div className="font-display text-4xl tabular-nums md:text-5xl text-bone-50">
                     <NumberTicker value={s.value} suffix={s.suffix} />
                   </div>
-                  <div className="mt-2 text-[10px] uppercase leading-snug tracking-[0.14em] text-bone-300/60 sm:text-xs sm:tracking-[0.18em]">
+                  <div className="mt-2 text-[10px] uppercase leading-snug tracking-[0.14em] text-bone-300/70 sm:text-xs sm:tracking-[0.18em]">
                     {s.label}
                   </div>
                 </div>
@@ -40,7 +39,7 @@ export function About() {
           <Reveal delay={0.25}>
             <div className="mt-12">
               <Button href="/sobre" variant="outline">
-                Conheça a JHCM
+                Conheça a RF
               </Button>
             </div>
           </Reveal>
@@ -51,7 +50,7 @@ export function About() {
             <div className="relative aspect-[4/5] overflow-hidden rounded-3xl border border-white/8 shadow-elev">
               <Image
                 src={aboutPhoto}
-                alt="Mesa de reunião e ambiente corporativo do JHCM Coworking em Belo Horizonte"
+                alt="Mesa de reunião e ambiente corporativo do RF Coworking em Belém"
                 fill
                 placeholder="blur"
                 sizes="(min-width: 1024px) 50vw, 100vw"

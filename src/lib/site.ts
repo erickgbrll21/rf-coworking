@@ -1,30 +1,30 @@
 export const site = {
-  name: "JHCM Coworking",
-  shortName: "JHCM",
-  tagline: "Coworking executivo no coração de Belo Horizonte",
+  name: "RF Coworking",
+  shortName: "RF",
+  tagline: "Coworking executivo no coração de Belém",
   description:
-    "Espaços corporativos premium em Belo Horizonte. Salas privativas, endereço fiscal, open office e salas de reunião executivas para empresas e profissionais exigentes.",
+    "Espaços corporativos premium em Belém. Salas privativas, endereço fiscal, open office e salas de reunião executivas para empresas e profissionais exigentes.",
   url: "https://jhcmcoworking.com.br",
   address: {
-    street: "R. Buenos Aires, 10",
-    complement: "12º andar",
-    district: "Carmo",
-    city: "Belo Horizonte",
-    state: "MG",
-    zip: "30315-570",
+    street: "Travessa Quintino Bocaiuva, 2301",
+    complement: "Ed. Rogelio Fernandez Business Center, Andar 01, Sala 107",
+    district: "Cremação",
+    city: "Belém",
+    state: "PA",
+    zip: "66045-315",
     full:
-      "R. Buenos Aires, 10 — 12º andar, Carmo, Belo Horizonte/MG, 30315-570",
+      "Travessa Quintino Bocaiuva, 2301 — Ed. Rogelio Fernandez Business Center, Andar 01, Sala 107, Cremação, Belém/PA, 66045-315",
   },
   whatsapp: {
     raw: "5531985614005",
     display: "(31) 9 8561-4005",
-    link: "https://wa.me/5531985614005?text=Ol%C3%A1%2C%20gostaria%20de%20conhecer%20a%20JHCM%20Coworking.",
+    link: "https://wa.me/5531985614005?text=Ol%C3%A1%2C%20gostaria%20de%20conhecer%20a%20RF%20Coworking.",
   },
   phone: {
     display: "(31) 3295-0497",
     link: "tel:+553132950497",
   },
-  email: "contato@jhcmcoworking.com.br",
+  email: "contato@rfcoworking.com.br",
   hours: {
     week: "Segunda a sexta · 08h às 19h",
     weekend: "Acesso 24h para clientes contratados",
@@ -33,7 +33,7 @@ export const site = {
     instagram: "https://instagram.com/jhcmcoworking",
   },
   mapsEmbed:
-    "https://www.google.com/maps?q=R.%20Buenos%20Aires%2C%2010%20-%20Carmo%2C%20Belo%20Horizonte%20-%20MG%2C%2030315-570&output=embed",
+    "https://www.google.com/maps?q=Travessa%20Quintino%20Bocaiuva%2C%202301%20-%20Crema%C3%A7%C3%A3o%2C%20Bel%C3%A9m%20-%20PA%2C%2066045-315&output=embed",
 };
 
 export type NavItem = { label: string; href: string };
@@ -45,5 +45,5 @@ export const nav: NavItem[] = [
   { label: "Endereço Fiscal", href: "/servicos/endereco-fiscal" },
   { label: "Open Office", href: "/servicos/open-office" },
   { label: "Salas de Reunião", href: "/servicos/salas-de-reuniao" },
-  { label: "Contato", href: "/contato" },
+  { label: "Contato", href: "/#contato" },
 ];

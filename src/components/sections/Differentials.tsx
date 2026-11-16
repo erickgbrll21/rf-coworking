@@ -8,7 +8,6 @@ export function Differentials() {
     <section className="relative bg-ink-950 py-20 sm:py-28 md:py-40">
       <div className="container">
         <SectionHeading
-          eyebrow="Diferenciais"
           title={
             <>
               Tudo o que sua operação <em className="italic text-silver font-display">precisa</em>.
@@ -25,7 +24,7 @@ export function Differentials() {
                   <h3 className="mt-6 font-display text-xl font-light text-bone-50 [overflow-wrap:anywhere] sm:text-2xl">
                     {d.title}
                   </h3>
-                  <p className="mt-3 text-sm leading-relaxed text-bone-300/70 [overflow-wrap:anywhere]">
+                  <p className="mt-3 text-pretty text-sm leading-relaxed text-bone-300/75 [overflow-wrap:anywhere]">
                     {d.desc}
                   </p>
                 </div>

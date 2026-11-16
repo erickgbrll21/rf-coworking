@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { cn } from "@/lib/cn";
-import logoSrc from "../../../assets/Design sem nome (14).png";
+import logoSrc from "../../../assets/logo_rf_co_working (1).png";
 
 type LogoProps = {
   className?: string;
@@ -12,7 +12,7 @@ export function Logo({ className, priority = false }: LogoProps) {
   return (
     <Image
       src={logoSrc}
-      alt="JHCM Coworking"
+      alt="RF Coworking"
       width={logoSrc.width}
       height={logoSrc.height}
       className={cn("h-12 w-auto object-contain object-left", className)}

@@ -7,7 +7,6 @@ import { FaIcon } from "@/components/ui/FaIcon";
 type Crumb = { label: string; href?: string };
 
 type Props = {
-  eyebrow: string;
   title: React.ReactNode;
   description?: React.ReactNode;
   image: string | StaticImageData;
@@ -17,7 +16,6 @@ type Props = {
 };
 
 export function PageHero({
-  eyebrow,
   title,
   description,
   image,
@@ -44,18 +42,23 @@ export function PageHero({
       <div className="relative container min-w-0 max-w-full">
         {crumbs && (
           <Reveal>
-            <nav className="flex max-w-full flex-wrap items-center gap-x-2 gap-y-2 text-[11px] uppercase tracking-[0.24em] text-bone-300/60">
+            <nav
+              aria-label="Breadcrumb"
+              className="flex max-w-full flex-wrap items-center gap-x-2 gap-y-2 text-[11px] uppercase tracking-[0.24em] text-bone-300/70"
+            >
               {crumbs.map((c, i) => (
                 <span key={i} className="flex items-center gap-2">
                   {c.href ? (
-                    <Link href={c.href} className="hover:text-silver">
+                    <Link href={c.href} className="transition-colors hover:text-bone-50">
                       {c.label}
                     </Link>
                   ) : (
-                    <span>{c.label}</span>
+                    <span aria-current={i === crumbs.length - 1 ? "page" : undefined}>
+                      {c.label}
+                    </span>
                   )}
                   {i < crumbs.length - 1 && (
-                    <FaIcon icon={faChevronRight} className="h-3 w-3" />
+                    <FaIcon icon={faChevronRight} className="h-2.5 w-2.5 text-bone-300/40" />
                   )}
                 </span>
               ))}
@@ -63,22 +66,15 @@ export function PageHero({
           </Reveal>
         )}
 
-        <Reveal delay={0.05}>
-          <span className="eyebrow mt-6 block">
-            <span className="h-px w-10 bg-silver" />
-            {eyebrow}
-          </span>
-        </Reveal>
-
-        <Reveal delay={0.1}>
-          <h1 className="heading-display mt-6 max-w-5xl text-4xl text-balance sm:text-5xl md:text-6xl lg:text-7xl [overflow-wrap:anywhere]">
+        <Reveal delay={0.06}>
+          <h1 className="heading-display mt-8 max-w-5xl text-4xl text-balance sm:text-5xl md:text-6xl lg:text-7xl [overflow-wrap:anywhere]">
             {title}
           </h1>
         </Reveal>
 
         {description && (
-          <Reveal delay={0.15}>
-            <p className="mt-8 max-w-2xl text-base leading-relaxed text-bone-300/75 [overflow-wrap:anywhere] md:text-lg">
+          <Reveal delay={0.12}>
+            <p className="mt-8 max-w-2xl text-pretty text-base leading-relaxed text-bone-300/75 [overflow-wrap:anywhere] md:text-lg">
               {description}
             </p>
           </Reveal>

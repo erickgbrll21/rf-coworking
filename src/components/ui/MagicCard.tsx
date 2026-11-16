@@ -24,18 +24,19 @@ export function MagicCard({ children, className }: Props) {
       ref={ref}
       onMouseMove={handleMove}
       className={cn(
-        "group relative overflow-hidden rounded-2xl border border-white/8 bg-ink-900/60 transition-colors duration-500 hover:border-silver/30",
+        "group relative overflow-hidden rounded-2xl border border-white/8 bg-ink-900/60 transition-colors duration-500 hover:border-silver/30 focus-within:border-silver/40",
         className
       )}
     >
       <div
+        aria-hidden
         className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-500 group-hover:opacity-100"
         style={{
           background:
-            "radial-gradient(420px circle at var(--mx) var(--my), rgba(200,169,97,0.12), transparent 50%)",
+            "radial-gradient(420px circle at var(--mx) var(--my), rgba(181,186,193,0.10), transparent 50%)",
         }}
       />
-      <div className="relative">{children}</div>
+      <div className="relative h-full">{children}</div>
     </div>
   );
 }

@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { faArrowRight, faArrowUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
+import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import { services } from "@/lib/services";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { MagicCard } from "@/components/ui/MagicCard";
@@ -11,7 +11,6 @@ export function Services() {
     <section className="relative bg-ink-950 py-20 sm:py-28 md:py-40">
       <div className="container">
         <SectionHeading
-          eyebrow="Nossos serviços"
           title={
             <>
               Soluções <em className="italic text-silver font-display">sob medida</em> para
@@ -25,23 +24,20 @@ export function Services() {
           {services.map((s, i) => (
               <Reveal key={s.slug} delay={i * 0.06}>
                 <MagicCard className="h-full">
-                  <Link href={s.href} className="flex h-full min-w-0 flex-col p-6 sm:p-8 md:p-10">
-                    <div className="flex items-start justify-between">
-                      <span className="inline-flex h-12 w-12 items-center justify-center rounded-xl border border-white/10 bg-white/5 text-silver transition-colors group-hover:border-silver/40">
-                        <FaIcon icon={s.icon} className="h-5 w-5" />
-                      </span>
-                      <FaIcon
-                        icon={faArrowUpRightFromSquare}
-                        className="h-5 w-5 text-bone-300/40 transition-all duration-500 group-hover:text-silver group-hover:translate-x-1 group-hover:-translate-y-1"
-                      />
-                    </div>
-                    <h3 className="mt-8 font-display text-xl font-light leading-tight text-bone-50 sm:text-2xl md:text-3xl [overflow-wrap:anywhere]">
+                  <Link
+                    href={s.href}
+                    className="flex h-full min-w-0 flex-col rounded-2xl p-6 focus-visible:outline-offset-[-3px] sm:p-8 md:p-10"
+                  >
+                    <span className="inline-flex h-12 w-12 items-center justify-center rounded-xl border border-white/10 bg-white/5 text-silver transition-colors duration-500 group-hover:border-silver/40 group-hover:bg-white/10">
+                      <FaIcon icon={s.icon} className="h-5 w-5" />
+                    </span>
+                    <h3 className="mt-8 font-display text-xl font-light leading-tight text-bone-50 text-balance sm:text-2xl md:text-3xl [overflow-wrap:anywhere]">
                       {s.title}
                     </h3>
-                    <p className="mt-4 text-sm leading-relaxed text-bone-300/70 grow">
+                    <p className="mt-4 grow text-pretty text-sm leading-relaxed text-bone-300/75">
                       {s.short}
                     </p>
-                    <span className="mt-8 inline-flex items-center gap-2 text-[11px] font-medium uppercase tracking-[0.24em] text-silver">
+                    <span className="mt-8 inline-flex items-center gap-2 border-t border-white/8 pt-6 text-[11px] font-medium uppercase tracking-[0.24em] text-silver transition-colors group-hover:text-bone-50">
                       Saiba mais
                       <FaIcon
                         icon={faArrowRight}

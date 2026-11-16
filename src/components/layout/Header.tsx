@@ -37,7 +37,7 @@ export function Header() {
   return (
     <header
       className={cn(
-        "fixed inset-x-0 top-0 transition-all duration-500",
+        "fixed inset-x-0 top-0 transition-[background-color,border-color,box-shadow] duration-500",
         open ? "z-[100]" : "z-50",
         open
           ? "bg-ink-950"
@@ -46,15 +46,15 @@ export function Header() {
             : "border-b border-transparent bg-transparent"
       )}
     >
-      <div className="container flex h-[5.5rem] items-center justify-between sm:h-[5.75rem]">
-        <Link href="/" className="group flex items-center gap-3">
+      <div className="container flex h-[6.5rem] items-center justify-between sm:h-28">
+        <Link href="/" aria-label={`${site.name} — página inicial`} className="group flex items-center gap-3">
           <Logo
             priority
-            className="h-16 w-auto sm:h-[4.5rem] md:h-[4.75rem] transition-opacity group-hover:opacity-90"
+            className="h-[4.5rem] w-auto sm:h-20 md:h-24 transition-opacity group-hover:opacity-90"
           />
         </Link>
 
-        <nav className="hidden lg:flex items-center gap-1">
+        <nav aria-label="Principal" className="hidden lg:flex items-center gap-1">
           {nav.map((item) => {
             const active =
               item.href === "/"
@@ -64,6 +64,7 @@ export function Header() {
               <Link
                 key={item.href}
                 href={item.href}
+                aria-current={active ? "page" : undefined}
                 className={cn(
                   "relative px-4 py-2 text-[13px] font-medium tracking-wide transition-colors",
                   active ? "text-bone-50" : "text-bone-300/80 hover:text-bone-50"
@@ -86,7 +87,7 @@ export function Header() {
             href={site.whatsapp.link}
             target="_blank"
             rel="noreferrer"
-            className="group inline-flex items-center gap-2 rounded-full border border-bone-50/30 bg-transparent px-5 py-2.5 text-[12px] font-medium uppercase tracking-[0.18em] text-bone-50 transition-all duration-300 hover:border-bone-50 hover:bg-bone-50 hover:text-ink-950"
+            className="group inline-flex items-center gap-2 rounded-full border border-bone-50/30 bg-transparent px-5 py-2.5 text-[12px] font-medium uppercase tracking-[0.18em] text-bone-50 transition-[background-color,border-color,color] duration-300 hover:border-bone-50 hover:bg-bone-50 hover:text-ink-950"
           >
             <FaIcon icon={faWhatsapp} className="h-3.5 w-3.5" />
             Falar agora
@@ -94,9 +95,12 @@ export function Header() {
         </div>
 
         <button
-          aria-label="Abrir menu"
+          type="button"
+          aria-label={open ? "Fechar menu" : "Abrir menu"}
+          aria-expanded={open}
+          aria-controls="menu-mobile"
           onClick={() => setOpen((v) => !v)}
-          className="lg:hidden inline-flex h-11 w-11 items-center justify-center rounded-full border border-white/10 text-bone-50"
+          className="lg:hidden inline-flex h-11 w-11 items-center justify-center rounded-full border border-white/10 text-bone-50 transition-colors hover:border-white/30 hover:bg-white/5"
         >
           {open ? (
             <FaIcon icon={faXmark} className="h-5 w-5" />
@@ -109,14 +113,15 @@ export function Header() {
       <AnimatePresence>
         {open && (
           <motion.div
+            id="menu-mobile"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.3 }}
-            className="lg:hidden fixed inset-x-0 bottom-0 top-[5.5rem] z-50 overflow-y-auto overscroll-contain border-t border-white/5 bg-ink-950 sm:top-[5.75rem]"
+            className="lg:hidden fixed inset-x-0 bottom-0 top-[6.5rem] z-50 overflow-y-auto overscroll-contain border-t border-white/5 bg-ink-950 sm:top-28"
           >
             <div className="container py-8 pb-28">
-              <nav className="flex flex-col">
+              <nav aria-label="Menu" className="flex flex-col">
                 {nav.map((item, i) => (
                   <motion.div
                     key={item.href}
@@ -127,7 +132,12 @@ export function Header() {
                     <Link
                       href={item.href}
                       onClick={() => setOpen(false)}
-                      className="flex items-center justify-between border-b border-white/5 py-5 text-lg font-light tracking-wide text-bone-50"
+                      aria-current={
+                        (item.href === "/" ? pathname === "/" : pathname.startsWith(item.href))
+                          ? "page"
+                          : undefined
+                      }
+                      className="flex items-center justify-between border-b border-white/5 py-5 font-display text-2xl font-light text-bone-50 aria-[current=page]:text-silver"
                     >
                       <span>{item.label}</span>
                       <FaIcon icon={faChevronRight} className="h-4 w-4 text-silver" />
@@ -139,7 +149,7 @@ export function Header() {
                 href={site.whatsapp.link}
                 target="_blank"
                 rel="noreferrer"
-                className="mt-8 flex w-full items-center justify-center gap-2 rounded-full border border-white/20 bg-white/10 py-4 text-sm font-medium uppercase tracking-[0.18em] text-bone-50 shadow-[0_4px_24px_-6px_rgba(255,255,255,0.15)] transition-all duration-300 hover:bg-bone-50 hover:text-ink-950 hover:shadow-[0_8px_32px_-8px_rgba(255,255,255,0.35)] active:scale-[0.98]"
+                className="mt-8 flex w-full items-center justify-center gap-2 rounded-full border border-bone-50 bg-bone-50 py-4 text-sm font-medium uppercase tracking-[0.18em] text-ink-950 transition-[background-color,transform] duration-300 hover:bg-silver-soft active:scale-[0.98]"
               >
                 <FaIcon icon={faWhatsapp} className="h-4 w-4" />
                 Falar no WhatsApp

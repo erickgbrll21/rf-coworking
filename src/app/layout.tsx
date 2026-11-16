@@ -35,13 +35,13 @@ export const metadata: Metadata = {
   },
   description: site.description,
   keywords: [
-    "coworking Belo Horizonte",
-    "sala privativa BH",
-    "endereço fiscal Belo Horizonte",
+    "coworking Belém",
+    "sala privativa Belém",
+    "endereço fiscal Belém",
     "escritório executivo",
-    "sala de reunião BH",
+    "sala de reunião Belém",
     "coworking premium",
-    "JHCM",
+    "RF Coworking",
   ],
   openGraph: {
     title: `${site.name} · ${site.tagline}`,
@@ -62,8 +62,14 @@ export default function RootLayout({
   return (
     <html lang="pt-BR" className={`${inter.variable} ${cormorant.variable}`}>
       <body className="font-sans bg-ink-950 text-bone-50 antialiased overflow-x-hidden min-w-0">
+        <a
+          href="#conteudo"
+          className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[200] focus:rounded-full focus:bg-bone-50 focus:px-5 focus:py-3 focus:text-sm focus:font-medium focus:text-ink-950"
+        >
+          Pular para o conteúdo
+        </a>
         <Header />
-        <main className="relative min-w-0 overflow-x-hidden">{children}</main>
+        <main id="conteudo" className="relative min-w-0 overflow-x-hidden">{children}</main>
         <Footer />
         <WhatsAppFloat />
       </body>

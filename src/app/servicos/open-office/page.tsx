@@ -19,7 +19,7 @@ import { FaIcon } from "@/components/ui/FaIcon";
 export const metadata: Metadata = {
   title: "Open Office Privativo",
   description:
-    "Estação privativa em open office executivo no Carmo, Belo Horizonte. Acesso 24h, estrutura compartilhada premium e ambiente profissional.",
+    "Estação privativa em open office executivo na Cremação, Belém. Acesso 24h, estrutura compartilhada premium e ambiente profissional.",
 };
 
 const benefits: { icon: IconDefinition; title: string; desc: string }[] = [
@@ -44,7 +44,7 @@ const structure = [
 const images = [
   {
     src: "/assets/coworking/Foto_090.jpg",
-    alt: "Sala de reunião executiva do JHCM Coworking com mesa preta e cadeiras ergonômicas",
+    alt: "Sala de reunião executiva do RF Coworking com mesa preta e cadeiras ergonômicas",
   },
   {
     src: "/assets/coworking/Foto_080.jpg",
@@ -52,15 +52,15 @@ const images = [
   },
   {
     src: "/assets/coworking/open-office-01.jpg",
-    alt: "Ambiente do open office privativo JHCM Coworking em Belo Horizonte",
+    alt: "Ambiente do open office privativo RF Coworking em Belém",
   },
   {
     src: "/assets/coworking/open-office-02.jpg",
-    alt: "Estações de trabalho no open office executivo da JHCM",
+    alt: "Estações de trabalho no open office executivo da RF",
   },
   {
     src: "/assets/coworking/open-office-03.jpg",
-    alt: "Espaço compartilhado premium do open office JHCM Coworking",
+    alt: "Espaço compartilhado premium do open office RF Coworking",
   },
 ];
 
@@ -68,7 +68,6 @@ export default function OpenOfficePage() {
   return (
     <>
       <PageHero
-        eyebrow="Open Office Privativo"
         title={
           <>
             Flexibilidade. Estrutura. <em className="italic text-silver font-display">Padrão executivo</em>.
@@ -83,13 +82,12 @@ export default function OpenOfficePage() {
       <section className="bg-ink-950 py-28 md:py-36">
         <div className="container">
           <SectionHeading
-            eyebrow="Diferenciais"
             title={
               <>
                 Mais que uma <em className="italic text-silver font-display">mesa compartilhada</em>.
               </>
             }
-            description="O Open Office da JHCM foi pensado para profissionais autônomos, equipes pequenas e consultores que precisam de uma estrutura corporativa séria."
+            description="O Open Office da RF foi pensado para profissionais autônomos, equipes pequenas e consultores que precisam de uma estrutura corporativa séria."
           />
           <div className="mt-16 grid md:grid-cols-2 lg:grid-cols-4 gap-px bg-white/8 rounded-2xl overflow-hidden">
             {benefits.map((b, i) => (
@@ -110,10 +108,9 @@ export default function OpenOfficePage() {
       </section>
 
       {/* ESTRUTURA */}
-      <section className="bg-ink-900 py-28 md:py-36 noise">
+      <section className="bg-ink-900 py-28 md:py-36">
         <div className="container">
           <SectionHeading
-            eyebrow="Estrutura compartilhada"
             title="O melhor da estrutura corporativa, sem o custo de um escritório."
           />
           <div className="mt-14">
@@ -125,14 +122,14 @@ export default function OpenOfficePage() {
       {/* GALERIA */}
       <section className="bg-ink-950 py-28 md:py-36">
         <div className="container">
-          <SectionHeading eyebrow="Galeria" title="Veja o ambiente." />
+          <SectionHeading title="Veja o ambiente." />
           <div className="mt-14">
             <Gallery images={images} />
           </div>
         </div>
       </section>
 
-      <FAQSection items={openOfficeFaqs} className="bg-ink-900 noise" />
+      <FAQSection items={openOfficeFaqs} className="bg-ink-900" />
 
       <CTASection
         title={

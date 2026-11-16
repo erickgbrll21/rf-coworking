@@ -36,31 +36,40 @@ export function ContactForm() {
     setSent(true);
   };
 
+  const labelClass =
+    "mb-2 block text-[11px] uppercase tracking-[0.24em] text-bone-300/70";
   const inputClass =
-    "w-full min-w-0 max-w-full border-b border-white/15 bg-transparent px-1 py-4 text-base text-bone-50 placeholder:text-bone-300/40 outline-none transition-colors focus:border-silver";
+    "w-full min-w-0 max-w-full rounded-none border-b border-white/15 bg-transparent px-1 py-4 text-base text-bone-50 placeholder:text-bone-300/60 transition-colors hover:border-white/30 focus:border-silver focus:outline-none focus-visible:outline-none";
 
   return (
     <form onSubmit={handleSubmit} className="space-y-7">
       <div className="grid md:grid-cols-2 gap-7">
         <div>
-          <label className="block text-[11px] uppercase tracking-[0.24em] text-bone-300/60 mb-2">
+          <label htmlFor="cf-name" className={labelClass}>
             Nome
           </label>
           <input
+            id="cf-name"
+            name="name"
+            autoComplete="name"
             required
             className={inputClass}
             value={form.name}
             onChange={(e) => setForm({ ...form, name: e.target.value })}
-            placeholder="Seu nome completo"
+            placeholder="Seu nome completo…"
           />
         </div>
         <div>
-          <label className="block text-[11px] uppercase tracking-[0.24em] text-bone-300/60 mb-2">
+          <label htmlFor="cf-email" className={labelClass}>
             E-mail
           </label>
           <input
-            required
+            id="cf-email"
+            name="email"
             type="email"
+            autoComplete="email"
+            spellCheck={false}
+            required
             className={inputClass}
             value={form.email}
             onChange={(e) => setForm({ ...form, email: e.target.value })}
@@ -71,28 +80,35 @@ export function ContactForm() {
 
       <div className="grid md:grid-cols-2 gap-7">
         <div>
-          <label className="block text-[11px] uppercase tracking-[0.24em] text-bone-300/60 mb-2">
+          <label htmlFor="cf-phone" className={labelClass}>
             Telefone / WhatsApp
           </label>
           <input
+            id="cf-phone"
+            name="phone"
+            type="tel"
+            inputMode="tel"
+            autoComplete="tel"
             required
             className={inputClass}
             value={form.phone}
             onChange={(e) => setForm({ ...form, phone: e.target.value })}
-            placeholder="(31) 99999-9999"
+            placeholder="(91) 99999-9999"
           />
         </div>
         <div>
-          <label className="block text-[11px] uppercase tracking-[0.24em] text-bone-300/60 mb-2">
+          <label htmlFor="cf-interest" className={labelClass}>
             Interesse
           </label>
           <select
+            id="cf-interest"
+            name="interest"
             className={inputClass + " appearance-none cursor-pointer"}
             value={form.interest}
             onChange={(e) => setForm({ ...form, interest: e.target.value })}
           >
             {services.map((s) => (
-              <option key={s} value={s} className="bg-ink-900">
+              <option key={s} value={s} className="bg-ink-900 text-bone-50">
                 {s}
               </option>
             ))}
@@ -101,23 +117,25 @@ export function ContactForm() {
       </div>
 
       <div>
-        <label className="block text-[11px] uppercase tracking-[0.24em] text-bone-300/60 mb-2">
+        <label htmlFor="cf-message" className={labelClass}>
           Mensagem
         </label>
         <textarea
+          id="cf-message"
+          name="message"
           required
           rows={4}
           className={inputClass + " resize-none"}
           value={form.message}
           onChange={(e) => setForm({ ...form, message: e.target.value })}
-          placeholder="Conte um pouco sobre o que você precisa..."
+          placeholder="Conte um pouco sobre o que você precisa…"
         />
       </div>
 
       <div className="pt-4">
         <button
           type="submit"
-          className="group inline-flex min-h-[48px] w-full max-w-md items-center justify-center gap-3 rounded-full border border-white/20 bg-white/10 px-8 py-4 text-[12px] font-medium uppercase tracking-[0.22em] text-bone-50 shadow-[0_4px_24px_-6px_rgba(255,255,255,0.15)] transition-all duration-300 hover:border-bone-50 hover:bg-bone-50 hover:text-ink-950 hover:shadow-[0_8px_32px_-8px_rgba(255,255,255,0.4)] active:scale-[0.98] sm:w-auto"
+          className="group inline-flex min-h-[48px] w-full max-w-md items-center justify-center gap-3 rounded-full border border-bone-50 bg-bone-50 px-8 py-4 text-[12px] font-medium uppercase tracking-[0.22em] text-ink-950 shadow-[0_10px_30px_-12px_rgba(255,255,255,0.35)] transition-[background-color,border-color,transform] duration-300 hover:border-silver-soft hover:bg-silver-soft active:scale-[0.98] sm:w-auto"
         >
           {sent ? (
             <>
@@ -133,8 +151,10 @@ export function ContactForm() {
             </>
           )}
         </button>
-        <p className="mt-4 text-xs text-bone-300/50">
-          Ao enviar, você será redirecionado para o WhatsApp com sua mensagem preenchida.
+        <p aria-live="polite" className="mt-4 text-xs text-bone-300/70">
+          {sent
+            ? "Abrimos o WhatsApp em uma nova aba com sua mensagem preenchida."
+            : "Ao enviar, você será redirecionado para o WhatsApp com sua mensagem preenchida."}
         </p>
       </div>
     </form>

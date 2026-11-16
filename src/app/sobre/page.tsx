@@ -15,22 +15,21 @@ import { FaIcon } from "@/components/ui/FaIcon";
 export const metadata: Metadata = {
   title: "Sobre nós",
   description:
-    "Conheça a JHCM Coworking — coworking executivo premium no Carmo, em Belo Horizonte. Estrutura, história, valores e diferenciais.",
+    "Conheça a RF Coworking — coworking executivo premium na Cremação, em Belém. Estrutura, história, valores e diferenciais.",
 };
 
 export default function SobrePage() {
   return (
     <>
       <PageHero
-        eyebrow="Quem somos"
         title={
           <>
             Um <em className="italic text-silver font-display">coworking executivo</em> pensado para empresas sérias.
           </>
         }
-        description="Desde a fundação, a JHCM existe para oferecer um ambiente onde profissionais e empresas possam operar com a credibilidade, a discrição e a estrutura que o mercado corporativo exige."
+        description="Desde a fundação, a RF existe para oferecer um ambiente onde profissionais e empresas possam operar com a credibilidade, a discrição e a estrutura que o mercado corporativo exige."
         image={sobreHeroPhoto}
-        imageAlt="Sala de reuniões executiva do JHCM Coworking em Belo Horizonte"
+        imageAlt="Sala de reuniões executiva do RF Coworking em Belém"
         crumbs={[{ label: "Início", href: "/" }, { label: "Sobre" }]}
       />
 
@@ -39,7 +38,6 @@ export default function SobrePage() {
         <div className="container grid min-w-0 max-w-full items-start gap-10 sm:gap-16 lg:grid-cols-12">
           <div className="min-w-0 lg:col-span-5">
             <SectionHeading
-              eyebrow="Missão"
               title={
                 <>
                   Estrutura premium para
@@ -52,8 +50,8 @@ export default function SobrePage() {
           <div className="min-w-0 space-y-6 lg:col-span-7 lg:pt-8">
             <Reveal>
               <p className="text-base leading-relaxed text-bone-300/85 [overflow-wrap:anywhere] sm:text-lg">
-                A JHCM Coworking nasceu da observação de uma necessidade clara
-                no mercado mineiro: profissionais e empresas precisavam de um
+                A RF Coworking nasceu da observação de uma necessidade clara
+                no mercado paraense: profissionais e empresas precisavam de um
                 espaço executivo verdadeiramente premium — não um coworking
                 qualquer, mas um endereço empresarial à altura de suas
                 operações.
@@ -61,11 +59,12 @@ export default function SobrePage() {
             </Reveal>
             <Reveal delay={0.1}>
               <p className="text-sm leading-relaxed text-bone-300/70 [overflow-wrap:anywhere] sm:text-base">
-                Ocupamos o 12º andar de um prédio comercial nobre no Carmo, em
-                Belo Horizonte. Aqui, advogados recebem clientes em salas
-                silenciosas, contadores operam com infraestrutura corporativa,
-                consultores conduzem reuniões com videoconferência profissional
-                e startups encontram a credibilidade que precisam para crescer.
+                Ocupamos o Ed. Rogelio Fernandez Business Center, na Cremação,
+                em Belém — Andar 01, Sala 107. Aqui, advogados e médicos recebem
+                pacientes e clientes em salas silenciosas, contadores operam com
+                infraestrutura corporativa, consultores conduzem reuniões com
+                videoconferência profissional e startups encontram a
+                credibilidade que precisam para crescer.
               </p>
             </Reveal>
             <Reveal delay={0.2}>
@@ -101,7 +100,6 @@ export default function SobrePage() {
       <section className="bg-ink-950 py-20 sm:py-28 md:py-36">
         <div className="container">
           <SectionHeading
-            eyebrow="Nossos valores"
             title={
               <>
                 Os pilares que <em className="italic text-silver font-display">nos definem</em>.
@@ -127,10 +125,9 @@ export default function SobrePage() {
       </section>
 
       {/* TIMELINE */}
-      <section className="bg-ink-900 py-20 sm:py-28 md:py-36 noise">
+      <section className="bg-ink-900 py-20 sm:py-28 md:py-36">
         <div className="container">
           <SectionHeading
-            eyebrow="Nossa trajetória"
             title="Construída com consistência."
           />
           <div className="mt-20 relative">
@@ -172,7 +169,7 @@ export default function SobrePage() {
               <div className="relative aspect-[4/5] overflow-hidden rounded-3xl border border-white/8">
                 <Image
                   src="https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1600&q=80"
-                  alt="Reunião executiva JHCM"
+                  alt="Reunião executiva RF"
                   fill
                   sizes="(min-width: 1024px) 50vw, 100vw"
                   className="object-cover"
@@ -182,13 +179,12 @@ export default function SobrePage() {
           </div>
           <div className="min-w-0 lg:col-span-6">
             <SectionHeading
-              eyebrow="Para quem é a JHCM"
               title={
                 <>
                   Quem se sente em <em className="italic text-silver font-display">casa</em> aqui.
                 </>
               }
-              description="A JHCM atende profissionais e empresas que prezam por excelência, discrição e profissionalismo em cada detalhe."
+              description="A RF atende profissionais e empresas que prezam por excelência, discrição e profissionalismo em cada detalhe."
             />
             <ul className="mt-10 grid grid-cols-1 sm:grid-cols-2 gap-4">
               {audiences.map((a, i) => (
@@ -202,10 +198,9 @@ export default function SobrePage() {
         </div>
       </section>
 
-      <FAQSection items={sobreFaqs} className="bg-ink-900 noise" />
+      <FAQSection items={sobreFaqs} className="bg-ink-900" />
 
       <CTASection
-        eyebrow="Conheça pessoalmente"
         title={
           <>
             Visite o espaço.
@@ -213,7 +208,7 @@ export default function SobrePage() {
             <em className="italic text-silver font-display">Sinta a diferença.</em>
           </>
         }
-        description="A melhor forma de entender o padrão JHCM é vivenciá-lo. Agende uma visita guiada com nossa equipe."
+        description="A melhor forma de entender o padrão RF é vivenciá-lo. Agende uma visita guiada com nossa equipe."
       />
     </>
   );

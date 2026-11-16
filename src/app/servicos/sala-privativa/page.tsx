@@ -19,7 +19,7 @@ import { FaIcon } from "@/components/ui/FaIcon";
 export const metadata: Metadata = {
   title: "Sala Privativa · 2 Posições",
   description:
-    "Sala privativa para 2 pessoas em coworking executivo no Carmo, Belo Horizonte. Mobiliada, climatizada, com acesso 24h e estrutura premium.",
+    "Sala privativa para 2 pessoas em coworking executivo na Cremação, Belém. Mobiliada, climatizada, com acesso 24h e estrutura premium.",
 };
 
 const advantages: { icon: IconDefinition; title: string; desc: string }[] = [
@@ -58,6 +58,7 @@ const structure = [
 
 const ideal = [
   "Advogados que recebem clientes regularmente",
+  "Médicos que atendem com privacidade e discrição",
   "Contadores com equipe enxuta",
   "Consultores que precisam de discrição",
   "Sócios de pequenas empresas",
@@ -67,7 +68,7 @@ const ideal = [
 const images = [
   {
     src: "/assets/coworking/Foto_090.jpg",
-    alt: "Sala de reunião executiva do JHCM Coworking com mesa preta e cadeiras ergonômicas",
+    alt: "Sala de reunião executiva do RF Coworking com mesa preta e cadeiras ergonômicas",
   },
   {
     src: "/assets/coworking/Foto_039.jpg",
@@ -79,7 +80,7 @@ const images = [
   },
   {
     src: "/assets/coworking/Foto_067.jpg",
-    alt: "Vista ampla da sala privativa executiva JHCM Coworking",
+    alt: "Vista ampla da sala privativa executiva RF Coworking",
   },
 ];
 
@@ -87,7 +88,6 @@ export default function SalaPrivativaPage() {
   return (
     <>
       <PageHero
-        eyebrow="Sala Privativa · 2 Posições"
         title={
           <>
             Seu escritório <em className="italic text-silver font-display">exclusivo</em> em endereço corporativo premium.
@@ -106,13 +106,12 @@ export default function SalaPrivativaPage() {
       <section className="bg-ink-950 py-28 md:py-36">
         <div className="container">
           <SectionHeading
-            eyebrow="Por que escolher"
             title={
               <>
                 Mais que uma sala. Um <em className="italic text-silver font-display">posicionamento</em>.
               </>
             }
-            description="Uma sala privativa na JHCM comunica seriedade desde o primeiro contato — antes mesmo da primeira palavra."
+            description="Uma sala privativa na RF comunica seriedade desde o primeiro contato — antes mesmo da primeira palavra."
           />
           <div className="mt-16 grid md:grid-cols-2 lg:grid-cols-4 gap-px bg-white/8 rounded-2xl overflow-hidden">
             {advantages.map((a, i) => (
@@ -133,10 +132,9 @@ export default function SalaPrivativaPage() {
       </section>
 
       {/* ESTRUTURA */}
-      <section className="bg-ink-900 py-28 md:py-36 noise">
+      <section className="bg-ink-900 py-28 md:py-36">
         <div className="container">
           <SectionHeading
-            eyebrow="Estrutura disponível"
             title={
               <>
                 Tudo <em className="italic text-silver font-display">incluso</em>. Você só traz o notebook.
@@ -154,9 +152,8 @@ export default function SalaPrivativaPage() {
         <div className="container grid lg:grid-cols-12 gap-16">
           <div className="lg:col-span-5">
             <SectionHeading
-              eyebrow="Para quem é ideal"
               title="Feita para profissionais que recebem."
-              description="Se a sua atividade exige privacidade, silêncio e um ambiente que transmita autoridade, a sala privativa JHCM foi pensada para você."
+              description="Se a sua atividade exige privacidade, silêncio e um ambiente que transmita autoridade, a sala privativa RF foi pensada para você."
             />
           </div>
           <div className="lg:col-span-7">
@@ -182,7 +179,6 @@ export default function SalaPrivativaPage() {
       <section className="bg-ink-900 py-28 md:py-36">
         <div className="container">
           <SectionHeading
-            eyebrow="Galeria"
             title="Conheça o ambiente."
           />
           <div className="mt-14">

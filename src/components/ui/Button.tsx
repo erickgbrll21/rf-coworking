@@ -1,9 +1,9 @@
 import Link from "next/link";
-import { faArrowUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
+import { faArrowRight, faArrowUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
 import { cn } from "@/lib/cn";
 import { FaIcon } from "@/components/ui/FaIcon";
 
-type Variant = "primary" | "outline" | "ghost";
+type Variant = "solid" | "primary" | "outline" | "ghost";
 
 type Props = {
   href: string;
@@ -15,12 +15,14 @@ type Props = {
 };
 
 const variants: Record<Variant, string> = {
+  solid:
+    "bg-bone-50 text-ink-950 border border-bone-50 shadow-[0_10px_30px_-12px_rgba(255,255,255,0.35)] hover:bg-silver-soft hover:border-silver-soft",
   primary:
-    "bg-white/10 text-bone-50 border border-white/20 shadow-[0_4px_24px_-6px_rgba(255,255,255,0.15)] hover:bg-bone-50 hover:text-ink-950 hover:border-bone-50 hover:shadow-[0_8px_32px_-8px_rgba(255,255,255,0.4)] active:scale-[0.98]",
+    "bg-white/10 text-bone-50 border border-white/20 shadow-[0_4px_24px_-6px_rgba(255,255,255,0.15)] hover:bg-bone-50 hover:text-ink-950 hover:border-bone-50 hover:shadow-[0_8px_32px_-8px_rgba(255,255,255,0.4)]",
   outline:
-    "bg-transparent text-bone-50 border border-bone-50/30 hover:bg-bone-50 hover:text-ink-950 hover:border-bone-50 active:scale-[0.98]",
+    "bg-transparent text-bone-50 border border-bone-50/30 hover:bg-bone-50 hover:text-ink-950 hover:border-bone-50",
   ghost:
-    "bg-transparent text-bone-50 border border-transparent hover:bg-white/10 hover:border-white/10 active:scale-[0.98]",
+    "bg-transparent text-bone-50 border border-transparent hover:bg-white/10 hover:border-white/10",
 };
 
 export function Button({
@@ -32,7 +34,7 @@ export function Button({
   icon = true,
 }: Props) {
   const cls = cn(
-    "group inline-flex min-h-[44px] max-w-full min-w-0 flex-nowrap items-center justify-center gap-x-2 rounded-full px-5 py-3.5 text-center text-[11px] font-medium uppercase tracking-[0.18em] transition-all duration-300 sm:px-7 sm:text-[12px] sm:tracking-[0.22em]",
+    "group inline-flex min-h-[48px] max-w-full min-w-0 flex-nowrap items-center justify-center gap-x-2 rounded-full px-5 py-3.5 text-center text-[11px] font-medium uppercase tracking-[0.18em] transition-[background-color,border-color,color,box-shadow,transform] duration-300 active:scale-[0.98] sm:px-7 sm:text-[12px] sm:tracking-[0.22em]",
     variants[variant],
     className
   );
@@ -42,8 +44,13 @@ export function Button({
       <span className="min-w-0 break-words">{children}</span>
       {icon && (
         <FaIcon
-          icon={faArrowUpRightFromSquare}
-          className="h-3.5 w-3.5 shrink-0 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+          icon={external ? faArrowUpRightFromSquare : faArrowRight}
+          className={cn(
+            "h-3.5 w-3.5 shrink-0 transition-transform duration-300",
+            external
+              ? "group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+              : "group-hover:translate-x-1"
+          )}
         />
       )}
     </>
